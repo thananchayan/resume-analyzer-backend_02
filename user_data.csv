@@ -1,0 +1,3 @@
+name,email,phone,summary,city,country,job_role,id,resume_score,recommended_skills,state,timestamp
+Deepak Padhi,dnoobnerd@gmail.com,8123456790,"Deepak Padhi is a learning Web Developer from Mumbai, Maharashtra. He is passionate about learning new technologies, skills and always willing to innovate new things.",Galle,Sri Lanka,DevOps Engineer,1,85,"Docker, Kubernetes, CI/CD",Southern Province,2025-09-03 04:20:55.257942
+THAVAMOHAN THANANCHAYAN,thananchayan26@gmail.com,0769982057,"Passionate about Machine Learning, Artificial Intelligence and Softwaredevelopment. Eager to contribute as aintern, I bring enthusiasm and a thirst for learning to your team.",Galle,Sri Lanka,ML Engineer,2,85,"TensorFlow, PyTorch, Scikit-learn",Southern Province,2025-09-03 04:29:53.512900
