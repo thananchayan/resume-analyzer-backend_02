@@ -192,7 +192,7 @@ app.add_middleware(
 HF_REPO = "thananchayan/gemma3-resume-lora"
 BASE_MODEL = "google/gemma-3-270m-it"
 HF_TOKEN = os.getenv("HF_TOKEN")  # <-- set this in your environment!
-print("Loaded HF_TOKEN:", HF_TOKEN[:10], "*****")
+
 
 tok = AutoTokenizer.from_pretrained(BASE_MODEL, token=HF_TOKEN)
 base = AutoModelForCausalLM.from_pretrained(
@@ -244,8 +244,7 @@ async def analyze_resume(file: UploadFile = File(...)):
     raw_text = extract_text_from_pdf(save_path)
     cleaned_text = preprocess_resume_text(raw_text)
     cleaned_text = cleaned_text[:4000]  # cap very long resumes
-    print("Cleaned Text:", cleaned_text[:500])
-    print("Raw Text:", raw_text[:500])
+
     os.remove(save_path)
 
     # Extract basic info
@@ -281,6 +280,7 @@ async def analyze_resume(file: UploadFile = File(...)):
     job_role = parsed.get("job_role", "Unknown")
     summary = parsed.get("summary", "")
     rec_skills = parsed.get("skills", [])
+    rec_skills = rec_skills[:6]
 
     # Get location info
     city, state, country = get_location_info()
